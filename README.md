@@ -12,7 +12,10 @@
 ![No Dependencies](https://img.shields.io/badge/dependencies-none-f97316?style=for-the-badge)
 ![Best Booth](https://img.shields.io/badge/🏆_Best_Booth-IT_Student_Expo_2026-f59e0b?style=for-the-badge)
 
-[**Live Demo**](#-live-demo) · [**Modules**](#-training-modules) · [**Getting Started**](#-getting-started) · [**Team**](#-the-team)
+[![Visit RangeOps](https://img.shields.io/badge/🌐_Visit-rangeops.ca-f97316?style=for-the-badge)](https://rangeops.ca)
+[![Try the Live Simulation](https://img.shields.io/badge/⏱️_Try-Live_Simulation-c2410c?style=for-the-badge)](https://rangeops.ca/#/live)
+
+[**Website**](https://rangeops.ca) · [**Live Simulation**](https://rangeops.ca/#/live) · [**Modules**](#-training-modules) · [**Run Locally**](#-run-locally) · [**Team**](#-the-team)
 
 </div>
 
@@ -23,6 +26,8 @@
 -->
 
 ## 📖 About
+
+> 🌐 **The site is live at [rangeops.ca](https://rangeops.ca).** Jump straight into the [live simulation](https://rangeops.ca/#/live).
 
 **RangeOps** teaches people how to spot, handle and recover from common cyber threats through interactive practice instead of slide decks. Learners test password strength, work through a security checklist, sort phishing from legitimate email, respond to simulated ransomware outbreaks, and earn a certificate at the end.
 
@@ -61,6 +66,8 @@ flowchart LR
 
 <br>
 
+👉 **[Try it now at rangeops.ca/#/live](https://rangeops.ca/#/live)**
+
 **Part 1: The inbox.** Six emails arrive one at a time. You get 12 seconds to either *report as phishing* or mark as *looks safe*. Run out of time and it counts as a miss.
 
 **Part 2: The outbreak.** Ransomware begins encrypting your files in real time. Choose containment actions before the bar hits 100%:
@@ -85,9 +92,9 @@ flowchart LR
 
 </details>
 
-## 🚀 Getting Started
+## 🚀 Run Locally
 
-No build step and no dependencies. Just open the file.
+You don't need to install anything to use RangeOps. Just visit **[rangeops.ca](https://rangeops.ca)**. To run your own copy, there's no build step and no dependencies:
 
 ```bash
 # Clone the repository
@@ -100,19 +107,14 @@ start index.html       # Windows
 xdg-open index.html    # Linux
 ```
 
-> **Tip:** rename `rangeops.html` to `index.html` if you plan to host it on GitHub Pages.
-
-### Hosting on GitHub Pages
-
-1. Push the repository to GitHub.
-2. Go to **Settings → Pages**.
-3. Under **Source**, choose your main branch and the `/ (root)` folder.
-4. Your site will be live at `https://<your-username>.github.io/rangeops/`.
-
 ## 🌐 Live Demo
 
-<!-- Replace with your published link -->
-> Add your live demo link here.
+| | Link |
+|---|---|
+| 🏠 **Full site** | [rangeops.ca](https://rangeops.ca) |
+| ⏱️ **Live simulation** | [rangeops.ca/#/live](https://rangeops.ca/#/live) |
+| 🛡️ **Threat response** | [rangeops.ca/#/respond](https://rangeops.ca/#/respond) |
+| 🧠 **Knowledge quiz** | [rangeops.ca/#/quiz](https://rangeops.ca/#/quiz) |
 
 ## 🗂️ Project Structure
 
@@ -163,25 +165,17 @@ Four Durham College **Computer Systems Technology** graduates who built the orig
 - [ ] Shared leaderboard
 - [ ] Team photos
 
-## 🤝 Contributing
-
-Ideas and improvements are welcome.
-
-1. Fork the repository
-2. Create a branch: `git checkout -b feature/your-idea`
-3. Commit your changes: `git commit -m "Add your idea"`
-4. Push the branch: `git push origin feature/your-idea`
-5. Open a pull request
-
 ## 📄 License
 
-[MIT](https://choosealicense.com/licenses/mit/).
+Add a license here, for example [MIT](https://choosealicense.com/licenses/mit/).
 
 ---
 
 <div align="center">
 
 **🎯 Enter the range of opportunity.**
+
+[**Visit rangeops.ca →**](https://rangeops.ca)
 
 Made by the RangeOps team · Durham College · 2026
 
