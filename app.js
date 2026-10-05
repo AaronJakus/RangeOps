@@ -1,4 +1,5 @@
 const $=id=>document.getElementById(id);
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 // Strength checker
 const pw=$('pw');
 const common=['password','123456','qwerty','letmein','admin','welcome','iloveyou','abc123'];
@@ -38,6 +39,7 @@ function upd(){$('pr').innerHTML='<div>Checklist: <b>'+S.chk+'/12</b></div><div>
 upd();
 $('th').onclick=()=>{const d=document.documentElement,c=d.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');d.dataset.theme=c==='dark'?'light':'dark'};
 const msgs=[['support@paypa1-alerts.com','Account locked! Verify within 24 hours at secure-paypa1-login.com',1,'Lookalike domain (paypa1) and artificial urgency.'],['A coworker (internal)','Staff meeting moved to 3pm Thursday. Same room as usual.',0,'Expected, internal, no links or requests for sensitive info.'],['"CEO" (free webmail address)','I\'m in a meeting. Buy five $100 gift cards and send me the codes. Keep it quiet.',1,'Classic impersonation scam. Gift card requests and secrecy are red flags.'],['SMS from unknown number','Your parcel is held. Pay a $1.99 fee at bit.ly/x9fk2.',1,'Unexpected text with a shortened link and a small payment ask.'],['Your bank\'s app notification','Your password was changed. If this wasn\'t you, open the app yourself to review.',0,'It tells you to use the app you already trust, not a link.']];
+shuffle(msgs);
 S.phN=msgs.length;let answered=0;
 msgs.forEach(m=>{const d=document.createElement('div');d.className='msg';d.innerHTML='<small></small><p style="margin:6px 0"></p><div class="row"><button class="btn o" type="button">Phish</button><button class="btn o" type="button">Legit</button></div><div class="res"></div>';
 d.querySelector('small').textContent='From: '+m[0];d.querySelector('p').textContent=m[1];
