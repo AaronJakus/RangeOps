@@ -167,7 +167,7 @@ Four Durham College **Computer Systems Technology** graduates who built the orig
 
 ## 📄 License
 
-Add a license here, for example [MIT](https://choosealicense.com/licenses/mit/).
+License [MIT](https://choosealicense.com/licenses/mit/).
 
 ---
 
