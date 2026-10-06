@@ -92,3 +92,50 @@ function route(){stopLive();
  document.title='RangeOps — '+titles[r];tm?document.getElementById('team').scrollIntoView():window.scrollTo(0,0);
 }
 window.addEventListener('hashchange',route);route();
+// ===== Header menu (append to the end of app.js, after route()) =====
+const menu = $('menu'), burger = $('burger');
+
+function closeMenus() {
+  menu.classList.remove('open');
+  burger.textContent = '☰';
+  burger.setAttribute('aria-expanded', 'false');
+  document.querySelectorAll('.dd').forEach(d => {
+    d.classList.remove('open');
+    d.querySelector('.ddb').setAttribute('aria-expanded', 'false');
+  });
+}
+
+burger.onclick = () => {
+  const open = menu.classList.toggle('open');
+  burger.textContent = open ? '✕' : '☰';
+  burger.setAttribute('aria-expanded', open);
+};
+
+document.querySelectorAll('.ddb').forEach(b => {
+  b.onclick = e => {
+    e.stopPropagation();
+    const d = b.parentElement;
+    const open = d.classList.toggle('open');
+    b.setAttribute('aria-expanded', open);
+  };
+});
+
+// Click outside or press Escape to close the dropdown
+document.addEventListener('click', e => {
+  document.querySelectorAll('.dd.open').forEach(d => {
+    if (!d.contains(e.target)) {
+      d.classList.remove('open');
+      d.querySelector('.ddb').setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenus(); });
+
+// After navigating, close menus (and keep the hover menu shut until the mouse leaves)
+window.addEventListener('hashchange', () => {
+  closeMenus();
+  document.querySelectorAll('.dd').forEach(d => {
+    d.classList.add('shut');
+    d.onmouseleave = () => d.classList.remove('shut');
+  });
+});
