@@ -89,6 +89,7 @@ function route(){stopLive();
  let r=(location.hash.replace(/^#\/?/,'')||'home');if(!titles[r])r='home';const tm=r==='team';if(tm)r='home';
  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+r));
  document.querySelectorAll('nav a[data-r]').forEach(a=>a.classList.toggle('on',a.dataset.r===r));
+ document.querySelectorAll('.dd').forEach(d=>d.classList.toggle('has-on',!!d.querySelector('a.on')));
  document.title='RangeOps — '+titles[r];tm?document.getElementById('team').scrollIntoView():window.scrollTo(0,0);
 }
 window.addEventListener('hashchange',route);route();
