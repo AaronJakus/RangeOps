@@ -28,6 +28,14 @@
       </div>
     </div>
     <a href="#/learn" data-r="learn">Learn</a>
+    <a href="#/tools" data-r="tools">Tools</a>
+    <div class="dd">
+      <button class="ddb" type="button" aria-haspopup="true" aria-expanded="false">About <span aria-hidden="true">▾</span></button>
+      <div class="ddm">
+        <a href="#/project" data-r="project"><b>Case study</b><small>The RangeOps capstone</small></a>
+        <a href="#/security" data-r="security"><b>Security</b><small>Protections and disclosure</small></a>
+      </div>
+    </div>
     <a href="#/team" data-r="team">Team</a>
     <button class="ico" id="th" type="button" aria-label="Toggle theme">◐</button>
   </div>
@@ -46,6 +54,8 @@
 <div class="grid mods"><a class="card" href="#/passwords"><div class="ic">1</div><h3>Password security</h3><p>Test strength and generate strong passwords.</p></a><a class="card" href="#/checklist"><div class="ic">2</div><h3>Security checklist</h3><p>12 habits everyone should follow. Printable.</p></a><a class="card" href="#/phishing"><div class="ic">3</div><h3>Spot the phish</h3><p>Practice spotting scam emails and texts.</p></a><a class="card" href="#/quiz"><div class="ic">4</div><h3>Knowledge quiz</h3><p>Test yourself and earn a certificate.</p></a><a class="card" href="#/learn"><div class="ic">5</div><h3>Learn &amp; respond</h3><p>Incident steps, glossary, FAQ and resources.</p></a><a class="card" href="#/respond"><div class="ic">6</div><h3>Threat response</h3><p>Practice handling ransomware, phishing and scam calls.</p></a></div>
 <div class="card" style="margin-top:16px"><h3 style="margin-top:0">Your progress</h3><div class="grid mut" id="pr"></div></div>
 </section>
+
+<section style="padding-bottom:0"><div class="grid"><a class="card" href="#/project"><h3 style="margin-top:0">The RangeOps case study</h3><p>What the capstone is, what it won and who brought which skills.</p></a><a class="card" href="#/security"><h3 style="margin-top:0">How this site is secured</h3><p>Built-in protections, hardened headers and responsible disclosure.</p></a></div></section>
 
 <section class="team" id="team">
 <h2>The team</h2>
@@ -89,6 +99,22 @@
 <div class="page" id="p-phishing"><section class="pg"><h2>Spot the phish</h2><p class="lead">Decide whether each message is a scam or legitimate. Look at the sender, links and urgency.</p><div id="ph"></div><div class="card" style="text-align:center">Score: <b id="phs">0 / 0</b></div><a class="back" href="#/quiz">Next: Quiz →</a></section></div>
 <div class="page" id="p-respond"><section class="pg"><h2>Threat response training</h2><p class="lead">Pick a threat and work through what to do, step by step. Wrong choices teach you why.</p><div class="row" id="tt" style="justify-content:center"></div><div class="card" id="tb" style="margin-top:16px"></div><div style="text-align:center;margin-top:24px"><a class="btn" href="#/live">Try the live simulation →</a></div><div style="text-align:center"><a class="back" href="#/quiz">Next: Quiz →</a></div></section></div>
 <div class="page" id="p-live"><section class="pg"><h2>Live simulation</h2><p class="lead">Handle your inbox against the clock, then respond to an outbreak as it spreads.</p><div class="card" id="lv"></div><a class="back" href="#/respond">← Back to scenarios</a></section></div>
+<div class="page" id="p-tools"><section class="pg"><h2>Security tools</h2><p class="lead">Working tools, not just lessons. The checks run in your browser and nothing you paste is uploaded.</p>
+<div class="card"><h3 style="margin-top:0">Spam &amp; phishing checker</h3><p class="mut" style="margin:0 0 10px">Paste a message and get a risk score with the exact rules that fired.</p><input id="sf" type="text" placeholder="Sender address (optional)" autocomplete="off" aria-label="Sender address" style="margin-bottom:10px"><textarea id="sp" placeholder="Paste the email, SMS or chat message here" aria-label="Message to check"></textarea><div class="row"><button class="btn" id="sgo" type="button">Check message</button><button class="btn o" id="s1" type="button">Try a phishing sample</button><button class="btn o" id="s2" type="button">Try a legit sample</button></div><div id="sr" aria-live="polite"></div></div>
+<div class="card" style="margin-top:16px"><h3 style="margin-top:0">VirusTotal lookup</h3><p class="mut" style="margin:0 0 10px">Look up a URL, domain, IP address or file hash. For a file, drop it below: it is hashed locally and never uploaded.</p><input id="vi" type="text" placeholder="URL, domain, IP or MD5/SHA-1/SHA-256 hash" autocomplete="off" aria-label="Indicator to look up"><div class="row"><button class="btn" id="vgo" type="button">Look up</button></div><label class="dz" id="dz" style="display:block;margin-top:14px"><input type="file" id="vf" hidden>Drop a file here or click to choose</label><div id="vr" aria-live="polite" style="margin-top:12px"></div><p class="mut" style="font-size:13px;margin:12px 0 0">Reports open on virustotal.com. A hash VirusTotal hasn’t seen is not proof that a file is safe.</p></div>
+<div class="card" style="margin-top:16px"><h3 style="margin-top:0">Email header analyzer</h3><p class="mut" style="margin:0 0 10px">Paste a message’s full headers (in Gmail: ⋮ → Show original). It checks SPF, DKIM and DMARC, compares sender domains and traces the delivery path.</p><textarea id="hd" placeholder="Paste the raw email headers here" aria-label="Email headers" style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px"></textarea><div class="row"><button class="btn" id="hgo" type="button">Analyze headers</button><button class="btn o" id="hsm" type="button">Try a spoofed sample</button></div><div id="hr" aria-live="polite"></div></div>
+<a class="back" href="#/phishing">← Back to practice</a></section></div>
+<div class="page" id="p-project"><section class="pg"><h2>RangeOps case study</h2><p class="lead">A web-based Lab-as-a-Service platform, built as a capstone by four Durham College Computer Systems Technology graduates. It won Best Booth at the Durham College IT Student Expo 2026.</p>
+<div class="card"><h3 style="margin-top:0">The idea</h3><p>Hands-on security practice needs a lab: virtual machines, isolated networks and tools that take hours to build. A Lab-as-a-Service platform removes that setup, so a learner launches a ready lab from the browser and practices safely.</p></div>
+<div class="card" style="margin-top:16px"><h3 style="margin-top:0">How it fits together</h3><div class="flow"><div class="fb"><b>Learner</b>Uses a browser</div><span class="fa">→</span><div class="fb"><b>Web portal</b>Where learners pick a lab</div><span class="fa">→</span><div class="fb"><b>Provisioning</b>Builds the lab on demand</div><span class="fa">→</span><div class="fb"><b>Isolated lab</b>Where practice happens, contained</div></div></div>
+<div class="card" style="margin-top:16px"><h3 style="margin-top:0">Who brought what</h3><div id="sk"></div></div>
+<div class="card" style="margin-top:16px"><h3 style="margin-top:0">This site is part of the portfolio</h3><p>The modules and tools here are working code: password analysis, phishing and spam detection, email header analysis and VirusTotal lookups, built with the same security habits the training teaches.</p><div class="row"><a class="btn" href="#/security">How it is secured</a><a class="btn o" href="#/team">Meet the team</a></div></div>
+<a class="back" href="#/">← Back to home</a></section></div>
+<div class="page" id="p-security"><section class="pg"><h2>Security &amp; disclosure</h2><p class="lead">This site should practice what it teaches. Here is how it is built, what the hardened build adds and how to report a problem.</p>
+<div class="card"><h3 style="margin-top:0">Built-in protections</h3><ul class="tips"><li>No cookies or analytics. The only third-party request is Google Fonts, plus your own Worker if live VirusTotal results are switched on.</li><li>Pasted messages, headers and file names are inserted as text, never as HTML, which blocks script injection.</li><li>Files are hashed in the browser with Web Crypto. Only the hash is ever looked up.</li><li>Generated passwords come from the browser’s cryptographic random source.</li><li>The VirusTotal API key lives in a Worker, never in page code.</li><li>External links open with <code>noopener</code>.</li></ul></div>
+<div class="card" style="margin-top:16px"><h3 style="margin-top:0">Hardened build</h3><p class="mut" style="margin:0 0 6px">The self-hosted version ships these response headers. <code>harden.py</code> recomputes the script hashes after every edit.</p><div id="hdrs"></div></div>
+<div class="card" style="margin-top:16px"><h3 style="margin-top:0">Responsible disclosure</h3><p class="mut" style="margin:0">Found a vulnerability? Email <a href="mailto:security@example.com">security@example.com</a> with steps to reproduce it. Please keep testing to your own data and accounts, avoid denial-of-service and social engineering, and give us reasonable time to fix before sharing details. Good-faith research is welcome, and reports are acknowledged within five business days.</p><div class="gen" id="stx" style="white-space:pre-wrap;font-size:13px"></div><div class="row"><button class="btn o" id="scp" type="button">Copy security.txt</button></div></div>
+<a class="back" href="#/">← Back to home</a></section></div>
 <div class="page" id="p-quiz"><section class="pg"><h2>Knowledge quiz</h2><p class="lead">Score 4 or more to earn your certificate.</p><div id="qz"></div><button class="btn" id="qs" type="button">Submit answers</button><div id="qr" style="margin-top:16px"></div><a class="back" href="#/">← Back to home</a></section></div>
 <div class="page" id="p-learn"><section class="pg"><h2>Learn &amp; respond</h2><p class="lead">Know what to do, know the terms, know where to look.</p>
 <div class="card"><h3 style="margin-top:0">If you think you've been hacked</h3><ol class="tips"><li>Disconnect the device from the network.</li><li>Change passwords from a different, clean device, starting with email.</li><li>Turn on multi-factor authentication.</li><li>Tell your IT contact or manager right away.</li><li>Watch bank and account activity, and report fraud if needed.</li></ol><div class="row"><a class="btn" href="mailto:hello@example.com?subject=Security%20incident%20report">Report an incident</a></div></div>
@@ -103,7 +129,7 @@
 <div class="card chk" style="max-width:720px;margin:0 auto">
 <div class="mut" id="prog">0 of 12 complete</div>
 <div class="bar"><i id="pf"></i></div>
-<div id="list"></div><div class="row noprint"><button class="btn o" type="button" onclick="doPrint(this)">Print checklist</button><button class="btn o" type="button" id="cpl">Copy checklist</button></div><p class="mut noprint hint" style="display:none;margin:8px 0 0">If nothing opened, your viewer is blocking printing. Open this page in its own browser tab and press Ctrl/Cmd+P, or use Copy.</p>
+<div id="list"></div><div class="row noprint"><button class="btn o" type="button" data-act="print">Print checklist</button><button class="btn o" type="button" id="cpl">Copy checklist</button></div><p class="mut noprint hint" style="display:none;margin:8px 0 0">If nothing opened, your viewer is blocking printing. Open this page in its own browser tab and press Ctrl/Cmd+P, or use Copy.</p>
 </div>
 </section><a class="back" href="#/">← Back to home</a></div>
 
@@ -111,8 +137,9 @@
 
 <footer><span><b>RangeOps</b> · Enter the range of opportunity</span><span>© 2026 · Concept recreation</span></footer>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="jspdf.umd.min.js"></script>
 <script src="app.js"></script>
+<script src="tools.js"></script>
 <script src="quick-wins.js"></script>
 </body>
 </html>
