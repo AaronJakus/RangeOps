@@ -1,0 +1,12 @@
+# Cloudflare Pages response headers. Because every script is an external file served
+# from this origin, no hashes are needed and nothing has to be rebuilt after edits.
+# Replace the vt-proxy host with your Worker URL (or delete it if you skip live VirusTotal).
+# Tip: rename the first header to Content-Security-Policy-Report-Only while testing.
+/*
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.pwnedpasswords.com https://vt-proxy.YOURNAME.workers.dev; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=63072000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
